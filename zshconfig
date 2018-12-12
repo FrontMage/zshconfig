@@ -83,8 +83,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias nvim="/home/xinbg/Downloads/nvim-linux64/bin/nvim"
 alias vim="nvim"
-alias zshconfig="vim $HOME/.config/zsh/zshconfig"
+alias zshconfig="vim $HOME/.config/zshconfig/zshconfig"
 alias pin="cd ~/Documents/pincloud.supe"
 alias gs="gulp serve"
 alias dmcli="dynamo.cli -k AKIAILCB3NXIXNXOKDGA -s aq4ZvvbgVgrfMmKrR5ERlgyQVW4TpYuRnljwIHPJ -r us-east-1 -p supe_"
@@ -95,9 +96,9 @@ alias find="fd"
 alias ls="exa"
 alias vimconfig="vim ~/.config/nvim/init.vim"
 alias csv="xsv"
+alias cat="bat"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/share/nvm/init-nvm.sh
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
@@ -129,3 +130,6 @@ export EDITOR="vim"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
