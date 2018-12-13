@@ -94,9 +94,10 @@ alias c="corgi exec"
 alias grep="rg"
 alias find="fd"
 alias ls="exa"
+alias cat="bat"
 alias vimconfig="vim ~/.config/nvim/init.vim"
 alias csv="xsv"
-alias cat="bat"
+alias ds="docker-compose"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -112,16 +113,20 @@ fi
 # Go binary config
 export PATH=$PATH:/usr/local/go/bin:~/.cargo/bin
 export GOPATH="/home/xinbg/Documents/go"
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:$(go env GOPATH)/bin:/home/xinbg/.deno/bin:/home/xinbg/.local/bin:/home/xinbg/.gem/ruby/2.5.0/bin
 # enable go modules
-# export GO111MODULE=on
+export GO111MODULE=on
+export GOPROXY=https://goproxy.io
 
 # powerlevel9k config
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir ssh dir_writable vcs newline)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status go_version node_version aws root_indicator background_jobs time)
 
 # Editor config
-export EDITOR="vim"
+export EDITOR="nvim"
+
+# fzf config
+export FZF_DEFAULT_COMMAND='fd --type f'
 
 # oni neovim config file
 # export MYVIMRC="/home/xinbg/Downloads/oni/vim/default/bundle/oni-vim-defaults/plugin/init.vim"
