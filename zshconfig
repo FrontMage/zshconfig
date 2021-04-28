@@ -83,7 +83,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias nvim="/home/xinbg/Downloads/nvim-linux64/bin/nvim"
 alias vim="nvim"
 alias zshconfig="vim $HOME/.config/zshconfig/zshconfig"
 alias pin="cd ~/Documents/pincloud.supe"
@@ -98,6 +97,8 @@ alias cat="bat"
 alias vimconfig="vim ~/.config/nvim/init.vim"
 alias csv="xsv"
 alias ds="docker-compose"
+alias du="dust"
+alias matlab="/mnt/1TB/matlab/bin/matlab"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -114,8 +115,7 @@ fi
 export PATH=$PATH:/usr/local/go/bin:~/.cargo/bin
 export GOPATH="/home/xinbg/Documents/go"
 export PATH=$PATH:$(go env GOPATH)/bin:/home/xinbg/.deno/bin:/home/xinbg/.local/bin:/home/xinbg/.gem/ruby/2.5.0/bin
-# enable go modules
-export GO111MODULE=on
+# golang module download proxy
 export GOPROXY=https://goproxy.io
 
 # powerlevel9k config
@@ -128,6 +128,17 @@ export EDITOR="nvim"
 # fzf config
 export FZF_DEFAULT_COMMAND='fd --type f'
 
+# golang module config
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+
+# tensorflow c lib config
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+# arrayfire config
+export AF_PATH=/home/xinbg/Downloads/arrayfire
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$AF_PATH/lib64
+
 # oni neovim config file
 # export MYVIMRC="/home/xinbg/Downloads/oni/vim/default/bundle/oni-vim-defaults/plugin/init.vim"
 
@@ -138,3 +149,4 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
